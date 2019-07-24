@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_background"
+    tools:context=".Information">
+    <EditText
+        android:id="@+id/Title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Information_input_box_height"
+        android:layout_marginStart="@dimen/infromation_input_box_margin_start"
+        android:layout_marginEnd="@dimen/infromation_input_box_margin_end"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/information_input_box"
+        android:fontFamily="sec-roboto-regular"
+        android:gravity="center_vertical"
+        android:hint="@string/Title"
+        android:paddingLeft="17dp"
+        android:paddingRight="17dp"
+        android:textColorHint="@color/secondarytext"
+        android:textColor="@color/primarytext"
+        android:inputType="text"
+        android:textSize="@dimen/information_font_size" />
+
+    <EditText
+        android:id="@+id/Description"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Information_input_box_height"
+        android:layout_below="@+id/Title"
+        android:layout_marginStart="@dimen/infromation_input_box_margin_start"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="@dimen/infromation_input_box_margin_end"
+        android:background="@drawable/information_input_box"
+        android:fontFamily="sec-roboto-regular"
+        android:gravity="center_vertical"
+        android:hint="@string/Description"
+        android:paddingLeft="17dp"
+        android:paddingRight="17dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:inputType="text"
+        android:textColor="@color/primarytext"
+        android:textColorHint="@color/secondarytext"
+        android:textSize="@dimen/information_font_size" />
+
+    <RelativeLayout
+        android:id="@+id/Date_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Information_input_box_height"
+        android:layout_below="@+id/Description"
+        android:layout_marginStart="@dimen/infromation_input_box_margin_start"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="@dimen/infromation_input_box_margin_end"
+        android:background="@drawable/information_input_box"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/Date"
+            android:fontFamily="sec-roboto-regular"
+            android:layout_centerVertical="true"
+            android:background="@drawable/information_date_input"
+            android:textColorHint="@color/secondarytext"
+            android:textSize="@dimen/information_font_size"
+            android:textColor="@color/primarytext"
+            android:layout_marginStart="17dp"/>
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/Calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/calendar"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="17dp"/>
+
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/Amount"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Information_input_box_height"
+        android:layout_below="@+id/Date_layout"
+        android:layout_marginStart="@dimen/infromation_input_box_margin_start"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="@dimen/infromation_input_box_margin_end"
+        android:background="@drawable/information_input_box"
+        android:fontFamily="sec-roboto-regular"
+        android:gravity="center_vertical"
+        android:hint="@string/Amount"
+        android:inputType="numberDecimal"
+        android:paddingLeft="17dp"
+        android:paddingRight="17dp"
+        android:textColorHint="@color/secondarytext"
+        android:textSize="@dimen/information_font_size" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Information_input_box_height"
+        android:layout_below="@+id/Amount"
+        android:layout_marginStart="@dimen/infromation_input_box_margin_start"
+        android:layout_marginEnd="@dimen/infromation_input_box_margin_end"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/information_money_type_box"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/Income_box"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/Income"
+            android:fontFamily="sec-roboto-regular"
+            android:gravity="center"
+            android:textSize="@dimen/information_font_size"
+            android:textColor="@color/primarytext"/>
+
+        <TextView
+            android:id="@+id/Expense_box"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/Expense"
+            android:fontFamily="sec-roboto-regular"
+            android:gravity="center"
+            android:textSize="@dimen/information_font_size"
+            android:textColor="@color/primarytext"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:weightSum="7"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="@dimen/infromation_input_box_margin_start"
+        android:layout_marginEnd="@dimen/infromation_input_box_margin_end">
+
+        <Button
+            android:id="@+id/Cancel"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/information_btn_height"
+            android:layout_gravity="center"
+            android:background="@drawable/information_btn"
+            android:textColor="@color/Titletext"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="15sp"
+            android:text="@string/Cancel" />
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/Save"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/information_btn_height"
+            android:layout_gravity="center"
+            android:background="@drawable/information_btn"
+            android:textColor="@color/Titletext"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="15sp"
+            android:text="@string/Save" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

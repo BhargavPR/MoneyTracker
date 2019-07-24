@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MoneyTracker</string>
+    <string name="MoneyTracker_with_space">M O N E Y T R A C K E R</string>
+    <string name="Title">Title</string>
+    <string name="Description">Description Optional</string>
+    <string name="Amount">Amount</string>
+    <string name="Date">Date</string>
+    <string name="Income">Income</string>
+    <string name="Expense">Expense</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Save">Save</string>
+</resources>

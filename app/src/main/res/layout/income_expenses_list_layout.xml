@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mtl_layout_height"
+    android:layout_marginStart="15dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginEnd="15dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/IvDescriptionImage"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/mtl_imageview_height"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/infromation_input_box_margin_start"
+            android:contentDescription="DescriptionImage"
+            android:src="@drawable/shopping" />
+
+        <TextView
+            android:id="@+id/IvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/mtl_title_view_height"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@id/IvDescriptionImage"
+            android:fontFamily="@font/alegreya"
+            android:gravity="bottom"
+            android:text="@string/Title"
+            android:textColor="@color/primarytext"
+            android:textSize="@dimen/mtl_title_view_font_size" />
+
+        <TextView
+            android:id="@+id/IvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/mtl_date_view_height"
+            android:layout_below="@+id/IvTitle"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@id/IvDescriptionImage"
+            android:fontFamily="sec-roboto-regular"
+            android:gravity="top"
+            android:text="@string/Date"
+            android:textColor="@color/secondarytext"
+            android:textSize="@dimen/mtl_date_view_font_size" />
+
+        <TextView
+            android:id="@+id/IvAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/mtl_amount_view_height"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="sec-roboto-regular"
+            android:gravity="center"
+            android:text="2500.00"
+            android:textSize="@dimen/mtl_amount_view_font_size" />
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

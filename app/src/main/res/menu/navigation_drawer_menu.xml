@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:title="Home" />
+        <item
+            android:id="@+id/History"
+            android:title="History" />
+        <item
+            android:id="@+id/Recyclerbin"
+            android:title="Recyclerbin" />
+        <item
+            android:id="@+id/Rating"
+            android:title="Rate MoneyTracker" />
+
+    </group>
+
+</menu>
