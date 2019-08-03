@@ -4,17 +4,42 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/home"
-            android:title="Home" />
+            android:title="Home"
+            android:icon="@drawable/home_icon_24dp"/>
         <item
-            android:id="@+id/History"
-            android:title="History" />
+            android:id="@+id/history"
+            android:title="All Records"
+            android:icon="@drawable/history_icon_24dp"/>
+        <item
+            android:id="@+id/estatement"
+            android:title="E-Statement"
+            android:icon="@drawable/history_icon_24dp"/>
         <item
             android:id="@+id/Recyclerbin"
-            android:title="Recyclerbin" />
-        <item
-            android:id="@+id/Rating"
-            android:title="Rate MoneyTracker" />
+            android:title="Recyclerbin"
+            android:icon="@drawable/delete_icon_24dp"/>
 
     </group>
 
+    <group>
+        <item
+            android:title="Recommed"/>
+
+        <item
+            android:title="Rate Us"/>
+        <item
+            android:title="About Us"/>
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:title="Recommed"/>
+
+            <item
+                android:title="Rate Us"/>
+            <item
+                android:title="About Us"/>
+        </menu>
+    </item>
 </menu>

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -23,10 +24,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String query = "CREATE TABLE " + Table_name + " ( " + Id + " INTEGER PRIMARY KEY AUTOINCREMENT, " + Title + " TEXT NOT NULL, " +
-                        Description + " TEXT, " + Amount + " REAL NOT NULL, " + Date + " TEXT, " + Type + " INTEGER" + "); ";
+                Description + " TEXT, " + Amount + " REAL NOT NULL, " + Date + " TEXT, " + Type + " INTEGER" + "); ";
         db.execSQL(query);
 
     }
+
 
     public boolean insert(String title,String description,Double amount,String date,int type){
         SQLiteDatabase db = this.getWritableDatabase();
@@ -47,7 +49,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         String query = "select * from " + Table_name;
         Cursor c = db.query(Table_name,new String[]{Id,Title,Description,Amount,Date,Type},null,null
-                   ,null,null,null, null);
+                ,null,null,null, null);
         return c;
     }
 
@@ -57,5 +59,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(query);
         onCreate(db);
 
+    }
+
+    public void updateData(int id,String title,String description,String date,Double amount,int type){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(Title,title);
+        cv.put(Description,description);
+        cv.put(Date,date);
+        cv.put(Amount,amount);
+        cv.put(Type,type);
+        cv.put(Id,id);
+        db.update(Table_name,cv,"Id = " + id,null);
+        Log.d("Bhargav","Update");
+    }
+
+    public void deleteInformation(int id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(Table_name,"Id = " + id,null);
     }
 }

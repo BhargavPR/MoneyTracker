@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
         <item>@font/alegreya</item>
+        <item>@font/alike</item>
+        <item>@font/alike_angular</item>
+        <item>@font/montserrat</item>
+        <item>@font/roboto</item>
+        <item>@font/roboto_medium</item>
+        <item>@font/roboto_slab</item>
+        <item>@font/roboto_slab_bold</item>
+        <item>@font/roboto_slab_light</item>
+        <item>@font/roboto_thin</item>
     </array>
 </resources>

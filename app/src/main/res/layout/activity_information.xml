@@ -6,53 +6,110 @@
     android:layout_height="match_parent"
     android:background="@color/light_background"
     tools:context=".Information">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/Information_activity_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:titleTextColor="@color/white"
+        app:title="Income/Expenses Details"
+        android:layout_alignParentTop="true"
+        android:background="@color/primary"/>
+
+    <LinearLayout
+        android:id="@+id/income_expenses_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Information_activity_toolbar"
+        android:layout_marginStart="@dimen/infromation_input_box_margin_start"
+        android:layout_marginEnd="@dimen/infromation_input_box_margin_end"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/information_money_type_box"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/Income_box"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingTop="9dp"
+            android:paddingBottom="9dp"
+            android:layout_height="match_parent"
+            android:text="@string/Income"
+            android:fontFamily="@font/roboto_slab"
+            android:gravity="center"
+            android:textSize="@dimen/information_font_size"
+            android:textColor="@color/primarytext"/>
+
+        <TextView
+            android:id="@+id/Expense_box"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingTop="9dp"
+            android:paddingBottom="9dp"
+            android:layout_height="match_parent"
+            android:text="@string/Expense"
+            android:fontFamily="@font/roboto_slab"
+            android:gravity="center"
+            android:textSize="@dimen/information_font_size"
+            android:textColor="@color/primarytext"/>
+
+
+    </LinearLayout>
+
     <EditText
         android:id="@+id/Title"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/Information_input_box_height"
-        android:layout_marginStart="@dimen/infromation_input_box_margin_start"
-        android:layout_marginEnd="@dimen/infromation_input_box_margin_end"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/information_input_box"
-        android:fontFamily="sec-roboto-regular"
-        android:gravity="center_vertical"
-        android:hint="@string/Title"
-        android:paddingLeft="17dp"
-        android:paddingRight="17dp"
-        android:textColorHint="@color/secondarytext"
-        android:textColor="@color/primarytext"
-        android:inputType="text"
-        android:textSize="@dimen/information_font_size" />
-
-    <EditText
-        android:id="@+id/Description"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/Information_input_box_height"
-        android:layout_below="@+id/Title"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/income_expenses_option"
         android:layout_marginStart="@dimen/infromation_input_box_margin_start"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="@dimen/infromation_input_box_margin_end"
         android:background="@drawable/information_input_box"
-        android:fontFamily="sec-roboto-regular"
+        android:fontFamily="@font/roboto_slab"
         android:gravity="center_vertical"
-        android:hint="@string/Description"
+        android:hint="@string/Title"
+        android:inputType="text"
         android:paddingLeft="17dp"
         android:paddingRight="17dp"
-        android:ellipsize="end"
-        android:maxLines="1"
-        android:inputType="text"
+        android:paddingTop="9dp"
+        android:paddingBottom="9dp"
         android:textColor="@color/primarytext"
         android:textColorHint="@color/secondarytext"
         android:textSize="@dimen/information_font_size" />
+
+    <LinearLayout
+        android:id="@+id/spinner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Title"
+        android:layout_marginStart="@dimen/infromation_input_box_margin_start"
+        android:layout_marginEnd="@dimen/infromation_input_box_margin_end"
+        android:layout_marginTop="10dp"
+        android:paddingTop="9dp"
+        android:paddingBottom="9dp"
+        android:background="@drawable/information_input_box">
+        <Spinner
+            android:id="@+id/category_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp">
+
+        </Spinner>
+
+    </LinearLayout>
+
 
     <RelativeLayout
         android:id="@+id/Date_layout"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/Information_input_box_height"
-        android:layout_below="@+id/Description"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner_layout"
         android:layout_marginStart="@dimen/infromation_input_box_margin_start"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="@dimen/infromation_input_box_margin_end"
+        android:paddingTop="9dp"
+        android:paddingBottom="9dp"
         android:background="@drawable/information_input_box"
         android:orientation="horizontal">
 
@@ -61,7 +118,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="@string/Date"
-            android:fontFamily="sec-roboto-regular"
+            android:fontFamily="@font/roboto_slab"
             android:layout_centerVertical="true"
             android:background="@drawable/information_date_input"
             android:textColorHint="@color/secondarytext"
@@ -83,13 +140,15 @@
     <EditText
         android:id="@+id/Amount"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/Information_input_box_height"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/Date_layout"
         android:layout_marginStart="@dimen/infromation_input_box_margin_start"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="@dimen/infromation_input_box_margin_end"
+        android:paddingTop="9dp"
+        android:paddingBottom="9dp"
         android:background="@drawable/information_input_box"
-        android:fontFamily="sec-roboto-regular"
+        android:fontFamily="@font/roboto_slab"
         android:gravity="center_vertical"
         android:hint="@string/Amount"
         android:inputType="numberDecimal"
@@ -98,80 +157,23 @@
         android:textColorHint="@color/secondarytext"
         android:textSize="@dimen/information_font_size" />
 
-    <LinearLayout
+
+
+    <Button
+        android:id="@+id/Save"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/Information_input_box_height"
-        android:layout_below="@+id/Amount"
-        android:layout_marginStart="@dimen/infromation_input_box_margin_start"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Amount"
         android:layout_marginEnd="@dimen/infromation_input_box_margin_end"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/information_money_type_box"
-        android:weightSum="2">
-
-        <TextView
-            android:id="@+id/Income_box"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:text="@string/Income"
-            android:fontFamily="sec-roboto-regular"
-            android:gravity="center"
-            android:textSize="@dimen/information_font_size"
-            android:textColor="@color/primarytext"/>
-
-        <TextView
-            android:id="@+id/Expense_box"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:text="@string/Expense"
-            android:fontFamily="sec-roboto-regular"
-            android:gravity="center"
-            android:textSize="@dimen/information_font_size"
-            android:textColor="@color/primarytext"/>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:weightSum="7"
-        android:orientation="horizontal"
-        android:layout_marginBottom="20dp"
         android:layout_marginStart="@dimen/infromation_input_box_margin_start"
-        android:layout_marginEnd="@dimen/infromation_input_box_margin_end">
+        android:layout_marginTop="20dp"
+        android:background="@drawable/information_update_btn"
+        android:fontFamily="@font/roboto_slab_bold"
+        android:text="@string/Save"
+        android:textColor="@color/Titletext"
+        android:textSize="16sp"
+        android:textAllCaps="false"/>
 
-        <Button
-            android:id="@+id/Cancel"
-            android:layout_weight="3"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/information_btn_height"
-            android:layout_gravity="center"
-            android:background="@drawable/information_btn"
-            android:textColor="@color/Titletext"
-            android:fontFamily="sans-serif-medium"
-            android:textSize="15sp"
-            android:text="@string/Cancel" />
-        <android.support.v4.widget.Space
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
-
-        <Button
-            android:id="@+id/Save"
-            android:layout_weight="3"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/information_btn_height"
-            android:layout_gravity="center"
-            android:background="@drawable/information_btn"
-            android:textColor="@color/Titletext"
-            android:fontFamily="sans-serif-medium"
-            android:textSize="15sp"
-            android:text="@string/Save" />
-
-    </LinearLayout>
 
 
 </RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/search"
+        android:title="Search"
+        android:icon="@drawable/search"
+        app:showAsAction="always"
+        android:orderInCategory="99"/>
+    <item
+        android:id="@+id/sort"
+        android:title="Sort"
+        android:icon="@drawable/sort_icon_24dp"
+        app:showAsAction="always"
+        android:orderInCategory="100"/>
+
+    <item
+        android:title="Setting"
+        app:showAsAction="never"
+        android:orderInCategory="102"/>
+
+    <item
+        android:title="About us"
+        app:showAsAction="never"
+        android:orderInCategory="103"/>
+
+    <item
+        android:title="Contact us"
+        app:showAsAction="never"
+        android:orderInCategory="104"/>
+
+</menu>

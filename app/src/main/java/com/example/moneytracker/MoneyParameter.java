@@ -1,13 +1,17 @@
+
 package com.example.moneytracker;
 
 public class MoneyParameter {
+    int Id;
     String Title;
     String Description;
     String Date;
     Double Amount;
     int Type;
+    private boolean isSelected = false;
 
-    public MoneyParameter(String title, String description, Double amount, String date, int type) {
+    public MoneyParameter(int id,String title, String description, Double amount, String date, int type) {
+        Id = id;
         Title = title;
         Description = description;
         Amount = amount;
@@ -54,4 +58,25 @@ public class MoneyParameter {
     public void setDate(String date) {
         Date = date;
     }
+
+    public int getId() {
+        return Id;
+    }
+
+    public void setId(int id) {
+        Id = id;
+    }
+
+    public boolean isSelected(){
+        return isSelected;
+    }
+    public void setSelected(boolean x){
+        isSelected = x;
+    }
+
+    public String getAmountToString(){
+        String amount = String.format("%.2f",Amount);
+        return amount;
+    }
 }
+

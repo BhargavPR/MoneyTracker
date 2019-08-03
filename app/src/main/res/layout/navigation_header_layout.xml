@@ -5,32 +5,31 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:theme="@style/Base.ThemeOverlay.AppCompat.Dark"
-    android:background="@color/primaryLight">
+    android:background="@color/primary">
 
     <android.support.v7.widget.AppCompatImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:layout_gravity="center"
         android:src="@mipmap/ic_launcher" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="san-serif-medium"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto_slab_bold"
         android:text="MoneyTracker"
-        android:gravity="center"
-        android:textColor="@color/primarytext"
-        android:textSize="18sp" />
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Save Your Money!!"
-        android:textSize="14sp"
         android:layout_marginTop="2dp"
-        android:fontFamily="sans-serif-regular"
-        android:gravity="center"
-        android:textColor="@color/primarytext"/>
+        android:fontFamily="@font/roboto_slab"
+        android:text="Track Your Money"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
 </LinearLayout>
+

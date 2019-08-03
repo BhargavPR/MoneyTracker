@@ -9,4 +9,47 @@
     <string name="Expense">Expense</string>
     <string name="Cancel">Cancel</string>
     <string name="Save">Save</string>
+
+    <string-array name="sorting_type">
+        <item>Sort by Amount</item>
+        <item>Sort by Date created</item>
+        <item>Sort by Title</item>
+    </string-array>
+
+    <string-array name="income_category">
+        <item>Select the Category</item>
+        <item>Salary</item>
+        <item>Bonus</item>
+        <item>Cashback</item>
+        <item>Refund</item>
+        <item>Lottery</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="expenses_category">
+        <item>Select the Category</item>
+        <item>Food</item>
+        <item>Transpotation</item>
+        <item>Home</item>
+        <item>Cab</item>
+        <item>Entertainment</item>
+        <item>Shopping</item>
+        <item>Clothing</item>
+        <item>Health</item>
+        <item>Sport</item>
+        <item>Electronics</item>
+        <item>Vegetables</item>
+        <item>Gifts</item>
+        <item>Travel</item>
+        <item>Education</item>
+        <item>Fruits</item>
+        <item>Others</item>
+    </string-array>
+    <string name="title_activity_tempo">Tempo</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 </resources>

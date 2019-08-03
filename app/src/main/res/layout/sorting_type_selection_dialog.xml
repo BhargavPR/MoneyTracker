@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-Bold"
+        android:text="Sort"
+        android:textColor="@color/primarytext"
+        android:textSize="21sp" />
+    <RadioGroup
+        android:id="@+id/sorting_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="Sort By Amount (High to Low)"
+            android:fontFamily="sans-serif-regular"
+            android:textColor="@color/primarytext"
+            android:textSize="@dimen/sorting_type_selection_dialog_text_size"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="Sort By Amount (Low to High)"
+            android:fontFamily="sans-serif-regular"
+            android:textColor="@color/primarytext"
+            android:textSize="@dimen/sorting_type_selection_dialog_text_size"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="Sort By Date (Most recent)"
+            android:fontFamily="sans-serif-regular"
+            android:textColor="@color/primarytext"
+            android:textSize="@dimen/sorting_type_selection_dialog_text_size"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="Sort By Date (Oldest first)"
+            android:fontFamily="sans-serif-regular"
+            android:textColor="@color/primarytext"
+            android:textSize="@dimen/sorting_type_selection_dialog_text_size"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="Sort By Title(A-Z)"
+            android:fontFamily="sans-serif-regular"
+            android:textColor="@color/primarytext"
+            android:textSize="@dimen/sorting_type_selection_dialog_text_size"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="Sort By Title(Z-A)"
+            android:fontFamily="sans-serif-regular"
+            android:textColor="@color/primarytext"
+            android:textSize="@dimen/sorting_type_selection_dialog_text_size"/>
+    </RadioGroup>
+
+</LinearLayout>

@@ -1,65 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/mtl_layout_height"
-    android:layout_marginStart="15dp"
-    android:layout_marginTop="15dp"
-    android:layout_marginEnd="15dp"
-    app:cardBackgroundColor="@color/white"
-    app:cardCornerRadius="10dp">
-
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/income_expenses_list_item_background">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/income_expenses_list_item"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_vertical">
+        android:layout_height="wrap_content"
+        android:minHeight="100dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="0dp"
+        android:weightSum="6.2">
 
         <ImageView
             android:id="@+id/IvDescriptionImage"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/mtl_imageview_height"
-            android:layout_centerVertical="true"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="0.7"
+            android:layout_gravity="center"
             android:layout_marginStart="@dimen/infromation_input_box_margin_start"
+            android:background="@drawable/description_image_background"
             android:contentDescription="DescriptionImage"
-            android:src="@drawable/shopping" />
+            android:padding="5dp"
+            android:src="@drawable/category_food" />
 
-        <TextView
-            android:id="@+id/IvTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/mtl_title_view_height"
-            android:layout_marginStart="15dp"
-            android:layout_toEndOf="@id/IvDescriptionImage"
-            android:fontFamily="@font/alegreya"
-            android:gravity="bottom"
-            android:text="@string/Title"
-            android:textColor="@color/primarytext"
-            android:textSize="@dimen/mtl_title_view_font_size" />
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:layout_weight="3.5">
 
-        <TextView
-            android:id="@+id/IvDate"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/mtl_date_view_height"
-            android:layout_below="@+id/IvTitle"
-            android:layout_marginStart="15dp"
-            android:layout_toEndOf="@id/IvDescriptionImage"
-            android:fontFamily="sec-roboto-regular"
-            android:gravity="top"
-            android:text="@string/Date"
-            android:textColor="@color/secondarytext"
-            android:textSize="@dimen/mtl_date_view_font_size" />
+            <TextView
+                android:id="@+id/IvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_slab"
+                android:gravity="bottom"
+                android:maxLines="1"
+                android:text="@string/Title"
+                android:textColor="@color/primarytext"
+                android:textSize="@dimen/mtl_title_view_font_size" />
+
+            <TextView
+                android:id="@+id/IvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/IvTitle"
+                android:layout_marginStart="15dp"
+                android:layout_weight="2"
+                android:fontFamily="@font/roboto_slab"
+                android:gravity="top"
+                android:text="@string/Date"
+                android:textColor="@color/secondarytext"
+                android:textSize="@dimen/mtl_date_view_font_size" />
+
+
+        </RelativeLayout>
+
 
         <TextView
             android:id="@+id/IvAmount"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/mtl_amount_view_height"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="20dp"
-            android:fontFamily="sec-roboto-regular"
-            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_weight="2"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_slab"
+            android:gravity="center_vertical|end"
+            android:maxLines="2"
             android:text="2500.00"
             android:textSize="@dimen/mtl_amount_view_font_size" />
-    </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/divider_color_light">
+    </LinearLayout>
 
 
-</android.support.v7.widget.CardView>
+</LinearLayout>
